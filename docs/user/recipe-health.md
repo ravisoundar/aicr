@@ -85,7 +85,7 @@ The deep-link is the current Evidence rendering. It is distinct from — and coe
 | h100-kind-training-slurm | kind | h100 | — | training | slurm | pass | R:0 D:4 P:0 C:10 | pending |
 | rtx-pro-6000-lke-ubuntu-inference | lke | rtx-pro-6000 | ubuntu | inference | — | pass | R:0 D:4 P:0 C:8 | pending |
 | rtx-pro-6000-lke-ubuntu-training | lke | rtx-pro-6000 | ubuntu | training | — | pass | R:0 D:4 P:0 C:8 | pending |
-| ocp-inference | ocp | — | — | inference | — | pass | R:0 D:3 P:0 C:1 | pending |
+| ocp-inference-nim | ocp | — | — | inference | nim | pass | R:0 D:3 P:0 C:11 | pending |
 | ocp-training | ocp | — | — | training | — | pass | R:0 D:3 P:0 C:1 | pending |
 | a100-oke-ubuntu-training-kubeflow | oke | a100 | ubuntu | training | kubeflow | pass | R:0 D:4 P:0 C:8 | pending |
 | gb200-oke-ubuntu-inference-dynamo | oke | gb200 | ubuntu | inference | dynamo | pass | R:0 D:4 P:1 C:10 | pending |
