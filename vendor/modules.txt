@@ -116,8 +116,8 @@ github.com/AzureAD/microsoft-authentication-library-for-go/apps/internal/shared
 github.com/AzureAD/microsoft-authentication-library-for-go/apps/internal/version
 github.com/AzureAD/microsoft-authentication-library-for-go/apps/managedidentity
 github.com/AzureAD/microsoft-authentication-library-for-go/apps/public
-# github.com/CycloneDX/cyclonedx-go v0.11.0
-## explicit; go 1.23
+# github.com/CycloneDX/cyclonedx-go v0.12.0
+## explicit; go 1.25
 github.com/CycloneDX/cyclonedx-go
 # github.com/IGLOU-EU/go-wildcard v1.0.3
 ## explicit; go 1.16
@@ -866,7 +866,7 @@ github.com/spf13/pflag
 # github.com/stretchr/objx v0.5.3
 ## explicit; go 1.20
 github.com/stretchr/objx
-# github.com/stretchr/testify v1.12.0
+# github.com/stretchr/testify v1.12.1
 ## explicit; go 1.17
 github.com/stretchr/testify/assert
 github.com/stretchr/testify/assert/yaml
