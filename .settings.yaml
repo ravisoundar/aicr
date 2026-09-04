@@ -67,32 +67,32 @@ security_tools:
 # E2E Testing Tools
 testing_tools:
   # renovate: datasource=github-releases depName=kubernetes/kubernetes depType=testing_tools
-  kubectl: 'v1.36.3'
+  kubectl: 'v1.37.0'
   # kubelogin: Entra exec-plugin for AKS kubeconfigs, installed by uat-azure.yaml
   # via `az aks install-cli` (which defaults to latest without an explicit pin).
   # renovate: datasource=github-releases depName=Azure/kubelogin depType=testing_tools
   kubelogin: 'v0.2.19'
   # renovate: datasource=github-releases depName=kubernetes-sigs/kind depType=testing_tools
-  kind: '0.32.0'
+  kind: '0.33.0'
   # renovate-digest: datasource=git-refs depName=nvkind packageName=https://github.com/NVIDIA/nvkind branch=main depType=testing_tools
   nvkind: 'c57050497cffee36f10c8b918d2727c4f26d886e'
   # renovate: datasource=github-releases depName=tilt-dev/ctlptl depType=testing_tools
-  ctlptl: '0.9.4'
+  ctlptl: '0.9.5'
   # renovate: datasource=github-releases depName=tilt-dev/tilt depType=testing_tools
   tilt: '0.37.7'
   # renovate: datasource=github-releases depName=helm/helm depType=testing_tools
   helm: 'v4.2.4'
   # renovate: datasource=github-releases depName=databus23/helm-diff depType=testing_tools
-  helm_diff: 'v3.15.11'
+  helm_diff: 'v3.15.12'
   # renovate: datasource=github-releases depName=helmfile/helmfile depType=testing_tools
-  helmfile: 'v1.7.3'
+  helmfile: 'v1.7.4'
   # helmfile_checksums are refreshed automatically by tools/update-helmfile-checksums
   # via Renovate postUpgradeTasks whenever the helmfile version above is bumped.
   helmfile_checksums:
-    linux_amd64: '23d7df593f704ab1709b3020c8c8083b1517c9e780b5010e756a7d36bd901552'
-    linux_arm64: '4a2346df40362f49f395e47d5d6a16a29322b5c6968720c1bde60d101ae97e3b'
-    darwin_amd64: 'b1be552f6ff68c7c10f064dec657e4297bc581eecf1ed66ff433964e17d9eb36'
-    darwin_arm64: 'b69933ab364b010c320d1c858265d1845735784d8b317211e046cf74e22c6e80'
+    linux_amd64: 'f96ef0a015df06b29d7f38bf0ca08821018ae25eb96bf2c7abd3affa1b84e112'
+    linux_arm64: '0292f57a4638a21e775b0ce8bde37ee3fdd65dbbdbe0e5b9a06718f1dd04c7fa'
+    darwin_amd64: '7a0951fcc5bb991d7ea3a0c80e35754eb3981dcadba19795edbec7cba2518ae2'
+    darwin_arm64: 'e1490d371fecc1f2d9aae914ef34058f3cb2363c9ee63350b37a85c3994d71d9'
   # renovate: datasource=github-releases depName=kubernetes-sigs/kwok depType=testing_tools
   kwok: 'v0.8.0'
   # renovate: datasource=github-releases depName=kyverno/chainsaw depType=testing_tools
@@ -105,24 +105,24 @@ testing_tools:
     darwin_amd64: 'ddb56002ff8c6265f55ec40c82eb0ef0dddec5127dd12d4fc5e7953453481f4b'
     darwin_arm64: '502bef17dd822217e82590e9ccf01c1e26a56b3fa34a835789b9af73e82a169a'
   # renovate: datasource=github-releases depName=mikefarah/yq depType=testing_tools
-  yq: 'v4.53.3'
+  yq: 'v4.53.6'
   # AWS CLI used by the KMS e2e to provision keys against the MiniStack emulator.
   # renovate: datasource=pypi depName=awscli depType=testing_tools
-  awscli: '1.46.0'
+  awscli: '1.46.1'
   # MiniStack: MIT-licensed, token-free AWS emulator (https://ministack.org) used
   # by the KMS e2e in place of LocalStack, whose latest/stable images now refuse
   # to boot without a paid license token. Pinned (never :latest) for reproducibility.
   # Run with USE_SSL=1: sigstore's awskms signer hardcodes https://, so the e2e
   # serves TLS with a mkcert cert (see mkcert below).
   # renovate: datasource=docker depName=ministackorg/ministack depType=testing_tools
-  ministack_image: 'ministackorg/ministack:1.4.17'
+  ministack_image: 'ministackorg/ministack:1.5.4'
   # OpenBAO: the Linux Foundation Apache-2.0 fork of HashiCorp Vault, used by the
   # Vault KMS e2e to exercise the hashivault:// signing/verification path against
   # a real Transit secrets engine. API-identical to Vault; the sigstore hashivault
   # provider drives it over plain HTTP in dev mode (no TLS needed). Pinned (never
   # :latest) for reproducibility.
   # renovate: datasource=docker depName=openbao/openbao depType=testing_tools
-  openbao_image: 'openbao/openbao:2.6.1'
+  openbao_image: 'openbao/openbao:2.6.2'
   # mkcert issues a trusted localhost cert for MiniStack's TLS and installs its CA
   # into the system trust store, so the Go AWS SDK accepts the awskms:// endpoint.
   # renovate: datasource=github-releases depName=FiloSottile/mkcert depType=testing_tools
@@ -133,7 +133,7 @@ testing_tools:
     linux_amd64: '6d31c65b03972c6dc4a14ab429f2928300518b26503f58723e532d1b0a3bbb52'
     linux_arm64: 'b98f2cc69fd9147fe4d405d859c57504571adec0d3611c3eefd04107c7ac00d0'
   # renovate: datasource=github-releases depName=kubernetes-sigs/karpenter depType=testing_tools
-  karpenter: 'v1.14.0'
+  karpenter: 'v1.14.1'
   # In-cluster OCI registry for KWOK deployer-matrix CI (issue #843).
   # Pulled from ECR Public (AWS's first-party mirror of Docker official
   # images): anonymous Docker Hub pulls rate-limit on shared CI runners
@@ -155,7 +155,7 @@ testing_tools:
   # kustomize-controller and helm-controller are the only controllers the
   # bundle consumes (OCIRepository -> Kustomization -> HelmRelease).
   # renovate: datasource=github-releases depName=fluxcd/flux2 depType=testing_tools
-  flux_version: 'v2.9.4'
+  flux_version: 'v2.9.5'
   # In-cluster Git server for the KWOK flux-git deployer lane (issue #963).
   # Rootless variant so the admin-user bootstrap can `kubectl exec gitea
   # admin user create` directly without su gymnastics.
@@ -165,9 +165,9 @@ testing_tools:
   # renovate: datasource=docker depName=docker.gitea.com/gitea depType=testing_tools
   gitea_image: 'docker.gitea.com/gitea:1.26.4-rootless'
   # renovate: datasource=github-releases depName=hauler-dev/hauler depType=testing_tools
-  hauler: 'v2.0.3'
+  hauler: 'v2.1.0'
   # renovate: datasource=github-releases depName=zarf-dev/zarf depType=testing_tools
-  zarf: 'v0.83.0'
+  zarf: 'v0.84.0'
 # Quality Thresholds
 quality:
   coverage_threshold: '80'
